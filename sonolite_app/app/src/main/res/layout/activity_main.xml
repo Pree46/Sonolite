@@ -1,45 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="20dp"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
-    <!-- Welcome Text -->
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Sonolite"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"/>
+
+    <!-- Overlay for contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!-- UI Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:gravity="center"
-        android:paddingBottom="30dp"/>
+        android:padding="20dp">
 
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="18sp"
-        android:backgroundTint="@color/purple_500"
-        android:textColor="@color/white"
-        android:padding="12dp"
-        android:layout_marginBottom="15dp"/>
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/Sonolite_logo"
+            android:layout_marginBottom="0pt"/>
 
-    <!-- Registration Button -->
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:textSize="18sp"
-        android:backgroundTint="@color/teal_700"
-        android:textColor="@color/white"
-        android:padding="12dp"/>
+        <!-- Welcome Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome To"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif"/>
 
-</LinearLayout>
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SONOLITE"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif"/>
+
+        <!-- Tagline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Affordable Ultrasound Anytime, Anywhere"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="sans-serif"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="18sp"
+            android:backgroundTint="#F48FB1"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif"/>
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="18sp"
+            android:backgroundTint="@android:color/white"
+            android:textColor="#F48FB1"
+            android:padding="12dp"
+            android:fontFamily="sans-serif"/>
+
+    </LinearLayout>
+
+</FrameLayout>
