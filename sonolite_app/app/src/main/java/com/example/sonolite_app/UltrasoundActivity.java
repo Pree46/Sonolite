@@ -13,7 +13,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class UltrasoundActivity extends AppCompatActivity {
 
-    private Button uploadScanButton, liveScanButton;
+    private Button uploadScanButton,uploadVideoButton, liveScanButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +22,21 @@ public class UltrasoundActivity extends AppCompatActivity {
 
         uploadScanButton = findViewById(R.id.uploadScanButton);
         liveScanButton = findViewById(R.id.liveScanButton);
+        uploadVideoButton = findViewById(R.id.uploadVideoButton);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         uploadScanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UltrasoundActivity.this, UploadScanActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        uploadVideoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UltrasoundActivity.this, UploadVideoActivity.class);
                 startActivity(intent);
             }
         });
