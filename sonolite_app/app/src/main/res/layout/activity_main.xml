@@ -26,7 +26,7 @@
         <ImageView
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:src="@drawable/Sonolite_logo"
+            android:src="@drawable/logo"
             android:layout_marginBottom="0pt"/>
 
         <!-- Welcome Text -->
