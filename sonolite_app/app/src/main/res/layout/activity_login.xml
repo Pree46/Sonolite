@@ -16,7 +16,7 @@
         android:text="Login to"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:fontFamily="sans-serif"/>
+        android:fontFamily="@font/semibold_font"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:textColor="@android:color/white"
         android:layout_gravity="center"
         android:paddingBottom="10dp"
-        android:fontFamily="sans-serif"/>
+        android:fontFamily="@font/bold_font"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         android:textColor="@android:color/white"
         android:layout_gravity="center"
         android:paddingBottom="20dp"
-        android:fontFamily="sans-serif"/>
+        android:fontFamily="@font/regular_font"/>
 
     <!-- Username Field -->
     <EditText
@@ -51,14 +51,14 @@
         android:textSize="16sp"
         android:elevation="2dp"
         android:layout_marginBottom="10dp"
-        android:fontFamily="sans-serif"/>
+        android:fontFamily="@font/regular_font"/>
 
     <!-- Password Field -->
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="********"
+        android:hint="****************"
         android:padding="12dp"
         android:background="@android:color/white"
         android:textColor="@android:color/black"
@@ -66,7 +66,7 @@
         android:inputType="textPassword"
         android:elevation="2dp"
         android:layout_marginBottom="10dp"
-        android:fontFamily="sans-serif"/>
+        android:fontFamily="@font/regular_font"/>
 
     <!-- Login Button -->
     <Button
@@ -78,6 +78,7 @@
         android:backgroundTint="#F48FB1"
         android:padding="12dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/semibold_font"/>
 
 </LinearLayout>

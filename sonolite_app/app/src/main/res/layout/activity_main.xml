@@ -38,7 +38,7 @@
             android:textColor="@android:color/white"
             android:gravity="center"
             android:layout_marginBottom="5dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/medium_font"/>
 
         <!-- App Name -->
         <TextView
@@ -50,7 +50,7 @@
             android:textColor="@android:color/white"
             android:gravity="center"
             android:layout_marginBottom="5dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/bold_font"/>
 
         <!-- Tagline -->
         <TextView
@@ -61,7 +61,7 @@
             android:textColor="@android:color/white"
             android:gravity="center"
             android:layout_marginBottom="30dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/semibold_font"/>
 
         <!-- Login Button -->
         <Button
@@ -74,7 +74,7 @@
             android:textColor="@android:color/white"
             android:padding="12dp"
             android:layout_marginBottom="15dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/semibold_font"/>
 
         <!-- Register Button -->
         <Button
@@ -86,7 +86,7 @@
             android:backgroundTint="@android:color/white"
             android:textColor="#F48FB1"
             android:padding="12dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/semibold_font"/>
 
     </LinearLayout>
     

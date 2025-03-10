@@ -37,7 +37,7 @@
             android:textColor="@android:color/white"
             android:gravity="center"
             android:paddingBottom="30dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/bold_font"/>
 
         <!-- Upload Previous Scan Button -->
         <Button
@@ -51,7 +51,7 @@
             android:padding="12dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/semibold_font"/>
 
         <!-- Start Scan Button -->
         <Button
@@ -65,7 +65,7 @@
             android:padding="12dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/semibold_font"/>
     </LinearLayout>
     <!-- Bottom Navigation Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView

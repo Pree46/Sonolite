@@ -40,7 +40,7 @@
             android:text="Upload Scan"
             android:layout_marginTop="20dp"
             android:backgroundTint="#F48FB1"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/semibold_font"/>
 
         <!-- Download PDF Button -->
         <Button
@@ -48,8 +48,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Download as PDF"
+            android:backgroundTint="#F48FB1"
             android:layout_marginTop="10dp"
-            android:visibility="gone" />
+            android:fontFamily="@font/semibold_font"/>
 
     </LinearLayout>
     <!-- ✅ Bottom Navigation View -->

@@ -34,7 +34,8 @@
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/semibold_font"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +45,8 @@
             android:textStyle="bold"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bold_font"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,7 +55,8 @@
             android:textSize="14sp"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/regular_font"/>
 
         <!-- Input Fields -->
         <EditText
@@ -65,7 +68,8 @@
             android:background="@android:color/white"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/regular_font"/>
 
         <EditText
             android:id="@+id/email"
@@ -76,7 +80,8 @@
             android:background="@android:color/white"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/regular_font"/>
 
         <EditText
             android:id="@+id/password"
@@ -88,7 +93,8 @@
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:inputType="textPassword"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/regular_font"/>
 
         <EditText
             android:id="@+id/confirmPassword"
@@ -100,7 +106,8 @@
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:inputType="textPassword"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/regular_font"/>
 
         <!-- Register Button -->
         <Button
@@ -113,7 +120,8 @@
             android:backgroundTint="#F48FB1"
             android:padding="12dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/semibold_font"/>
 
     </LinearLayout>
 
