@@ -11,14 +11,19 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -59,6 +64,7 @@ public class UploadScanActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
         uploadButton = findViewById(R.id.uploadButton);
         downloadPdfButton = findViewById(R.id.downloadPdfButton);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
 
@@ -80,6 +86,20 @@ public class UploadScanActivity extends AppCompatActivity {
                 saveImageAsPdf(annotatedImage);
             } else {
                 Toast.makeText(UploadScanActivity.this, "No image to save!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        startActivity(new Intent(UploadScanActivity.this, MainActivity.class));
+                        return true;
+                    case R.id.nav_scan:
+                        return true; // Already in the scan activity
+                }
+                return false;
             }
         });
     }

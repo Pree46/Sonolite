@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class UltrasoundActivity extends AppCompatActivity {
 
@@ -18,6 +22,7 @@ public class UltrasoundActivity extends AppCompatActivity {
 
         uploadScanButton = findViewById(R.id.uploadScanButton);
         liveScanButton = findViewById(R.id.liveScanButton);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         uploadScanButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,5 +38,20 @@ public class UltrasoundActivity extends AppCompatActivity {
                 // TODO: Implement live scan functionality
             }
         });
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_scan:
+                        startActivity(new Intent(UltrasoundActivity.this, MainActivity.class));
+                        return true;
+                    case R.id.nav_home:
+                        return true; // Already in the home activity
+                }
+                return false;
+            }
+        });
+
     }
 }
