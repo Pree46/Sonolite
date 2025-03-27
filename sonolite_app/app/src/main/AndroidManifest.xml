@@ -46,7 +46,12 @@
         <activity android:name=".LoginActivity" android:exported="true" />
         <activity android:name=".UltrasoundActivity" android:exported="true" />
         <activity android:name=".UploadScanActivity" android:exported="true" />
-        
+        <activity android:name=".Trimester1Activity"/>
+        <activity android:name=".Trimester2Activity"/>
+        <activity android:name=".Trimester3Activity"/>
+        <activity android:name=".PostDeliveryActivity"/>
+
+
 
 
 

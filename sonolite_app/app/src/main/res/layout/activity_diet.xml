@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="729dp"
+    android:background="@drawable/background"
+    android:paddingTop="20dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trimester Specific Diet"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Grid Layout for Icons -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:columnOrderPreserved="false"
+        android:paddingHorizontal="10dp">
+
+        <!-- Trimester 1 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:id="@+id/btnTrimester1"
+                android:layout_width="131dp"
+                android:layout_height="231dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/trimester1_image"
+                android:background="@drawable/rounded_card"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/tvTrimester1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trimester 1"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:background="@drawable/hover_background"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <!-- Trimester 2 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnTrimester2"
+                android:layout_width="131dp"
+                android:layout_height="231dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/trimester2_image"
+                android:background="@drawable/rounded_card"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/tvTrimester2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trimester 2"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:background="@drawable/hover_background"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <!-- Trimester 3 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:id="@+id/btnTrimester3"
+                android:layout_width="131dp"
+                android:layout_height="231dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/trimester3_image"
+                android:background="@drawable/rounded_card"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/tvTrimester3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trimester 3"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:background="@drawable/hover_background"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <!-- Post Delivery -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnPostDelivery"
+                android:layout_width="131dp"
+                android:layout_height="231dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/post_delivery_image"
+                android:background="@drawable/rounded_card"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/tvPostDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post Delivery"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:background="@drawable/hover_background"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+    </GridLayout>
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/menu_main"
+        android:elevation="8dp" />
+
+
+
+</RelativeLayout>

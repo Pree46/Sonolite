@@ -53,8 +53,10 @@ public class UltrasoundActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.nav_scan:
-                        startActivity(new Intent(UltrasoundActivity.this, MainActivity.class));
+                        startActivity(new Intent(UltrasoundActivity.this, UploadScanActivity.class));
                         return true;
+                    case R.id.nav_diet:
+                        startActivity(new Intent(UltrasoundActivity.this, DietActivity.class));
                     case R.id.nav_home:
                         return true; // Already in the home activity
                 }
