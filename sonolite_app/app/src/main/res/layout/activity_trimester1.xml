@@ -31,41 +31,6 @@
         app:rowCount="2"
         android:paddingTop="20dp">
 
-        <!-- Vegetables Card -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/vegetables_card"
-            android:layout_width="20dp"
-            android:layout_height="200dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="8dp"
-            android:layout_margin="8dp"
-            android:onClick="openDetails">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/baseline_food_bank_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vegetables"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:paddingTop="8dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
         <!-- Fruits Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/fruits_card"
@@ -86,9 +51,44 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/baseline_food_bank_24" />
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/fruits" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vegetables"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Vegetables Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/vegetables_card"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp"
+            android:onClick="openDetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/veggies" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,7 +101,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Proteins Card -->
+        <!-- Plant Proteins Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/proteins_card"
             android:layout_width="20dp"
@@ -121,9 +121,9 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/baseline_food_bank_24" />
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/plant_protein" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -135,6 +135,185 @@
                     android:paddingTop="8dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <!-- Animal Proteins Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/animal_proteins_card"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp"
+            android:onClick="openDetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/proteins" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Proteins"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Beverages Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/beverage_card"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp"
+            android:onClick="openDetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/beverage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Grains and whole foods Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grains_and_whole_foods"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp"
+            android:onClick="openDetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/whole_food" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Nuts and Oils Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nuts_and_seeds"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp"
+            android:onClick="openDetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/nuts_and_seeds" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Healthy fats and Oils -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/healthy_fats_and_oils"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp"
+            android:onClick="openDetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/fats_and_oils" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
 
     </androidx.gridlayout.widget.GridLayout>
 
