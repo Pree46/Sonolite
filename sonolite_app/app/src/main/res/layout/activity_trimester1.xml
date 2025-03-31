@@ -14,9 +14,10 @@
 
     <!-- 🔵 Trimester 1 Heading -->
     <TextView
+        android:id="@+id/trimester_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trimester 1"
+        android:text=""
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
@@ -317,6 +318,10 @@
 
     </androidx.gridlayout.widget.GridLayout>
 
+
+
     </LinearLayout>
+
+
 
 </ScrollView>

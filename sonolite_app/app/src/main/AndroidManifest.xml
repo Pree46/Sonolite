@@ -47,11 +47,8 @@
         <activity android:name=".UltrasoundActivity" android:exported="true" />
         <activity android:name=".UploadScanActivity" android:exported="true" />
         <activity android:name=".DietActivity" android:exported="true"/>
+        <activity android:name=".TrimesterActivity"/>
 
-        <activity android:name=".Trimester1Activity"/>
-        <activity android:name=".Trimester2Activity"/>
-        <activity android:name=".Trimester3Activity"/>
-        <activity android:name=".PostDeliveryActivity"/>
 
 
 
