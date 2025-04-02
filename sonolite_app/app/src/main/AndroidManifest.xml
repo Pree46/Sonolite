@@ -44,6 +44,7 @@
         <!-- RegisterActivity Declaration -->
         <activity android:name=".RegisterActivity" android:exported="true" />
         <activity android:name=".LoginActivity" android:exported="true" />
+        <activity android:name=".LanguageSelectionActivity"/>
         <activity android:name=".UltrasoundActivity" android:exported="true" />
         <activity android:name=".UploadScanActivity" android:exported="true" />
         <activity android:name=".DietActivity" android:exported="true"/>

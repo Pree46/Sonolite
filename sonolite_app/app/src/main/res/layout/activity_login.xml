@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:paddingBottom="5dp"
-        android:text="Login to"
+        android:text="@string/login_to"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:fontFamily="@font/semibold_font"/>
@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SONOLITE"
+        android:text="@string/app"
         android:textSize="32sp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
@@ -32,7 +32,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login as a patient using your registered email."
+        android:text="@string/login_description"
         android:textSize="14sp"
         android:textColor="@android:color/white"
         android:layout_gravity="center"
@@ -44,7 +44,7 @@
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your user name."
+        android:hint="@string/enter_username"
         android:padding="12dp"
         android:background="@android:color/white"
         android:textColor="@android:color/black"
@@ -58,7 +58,7 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="****************"
+        android:hint="@string/password_hint"
         android:padding="12dp"
         android:background="@android:color/white"
         android:textColor="@android:color/black"
@@ -73,12 +73,11 @@
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/login_button"
         android:textSize="18sp"
         android:backgroundTint="#F48FB1"
         android:padding="12dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/semibold_font"/>
-
 </LinearLayout>

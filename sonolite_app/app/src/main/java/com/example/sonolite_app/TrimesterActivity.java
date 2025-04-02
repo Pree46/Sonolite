@@ -37,48 +37,50 @@ public class TrimesterActivity extends AppCompatActivity {
         switch (trimester) {
             case 1:
                 content = getTrimester1Data(id);
-                headingTextView.setText("Trimester 1");
+                headingTextView.setText(getString(R.string.trimester_1));
                 break;
             case 2:
                 content = getTrimester2Data(id);
-                headingTextView.setText("Trimester 2");
+                headingTextView.setText(getString(R.string.trimester_2));
                 break;
             case 3:
                 content = getTrimester3Data(id);
-                headingTextView.setText("Trimester 3");
+                headingTextView.setText(getString(R.string.trimester_3));
                 break;
             case 4:
                 content = getPostDeliveryData(id);
-                headingTextView.setText("Post Delivery Diet");
+                headingTextView.setText(getString(R.string.post_delivery));
                 break;
         }
 
+
         // Dynamically set title & image based on selected category
         if (id == R.id.fruits_card) {
-            title = "Fruits";
+            title = getString(R.string.fruits);
             imageResId = R.drawable.fruits;
         } else if (id == R.id.vegetables_card) {
-            title = "Vegetables";
+            title = getString(R.string.vegetables);
             imageResId = R.drawable.veggie_bsl;
         } else if (id == R.id.proteins_card) {
-            title = "Plant Proteins";
+            title = getString(R.string.proteins);
             imageResId = R.drawable.plant_protein;
         } else if (id == R.id.animal_proteins_card) {
-            title = "Animal Proteins & Dairy";
+            title = getString(R.string.animal_proteins);
             imageResId = R.drawable.animal_protein_bsl;
         } else if (id == R.id.beverage_card) {
-            title = "Beverages";
+            title = getString(R.string.beverages);
             imageResId = R.drawable.beverage_bsl;
         } else if (id == R.id.grains_and_whole_foods) {
-            title = "Grains & Whole Foods";
+            title = getString(R.string.grains);
             imageResId = R.drawable.whole_food_bsl;
         } else if (id == R.id.nuts_and_seeds) {
-            title = "Nuts & Seeds";
+            title = getString(R.string.nuts);
             imageResId = R.drawable.nuts_bsl;
         } else if (id == R.id.healthy_fats_and_oils) {
-            title = "Healthy Fats & Oils";
+            title = getString(R.string.healthy_fats);
             imageResId = R.drawable.fats_bsl;
         }
+
 
         if (content.length > 0) {
             showBottomSheet(title, imageResId, content);

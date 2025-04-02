@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">சோனொலைட்_அப்</string>
+    <string name="action_settings">அமைப்புகள்</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">முதல் பகுதி</string>
+    <string name="second_fragment_label">இரண்டாம் பகுதி</string>
+    <string name="next">அடுத்தது</string>
+    <string name="previous">முந்தையது</string>
+    <string name="select_language">மொழியை தேர்ந்தெடுக்கவும்</string>
+
+    <!-- Main Activity -->
+    <string name="welcome_to">வரவேற்கிறோம்</string>
+    <string name="tagline">எந்த நேரத்திலும் எங்கு வேண்டுமானாலும் மலிவான அல்ட்ராசவுண்ட்</string>
+    <string name="login">உள்நுழை</string>
+
+    <!-- Login Page -->
+    <string name="app">சோனோலைட்</string>
+    <string name="login_to">உள்நுழைய</string>
+    <string name="login_description">உங்கள் பதிவுசெய்யப்பட்ட மின்னஞ்சலைப் பயன்படுத்தி நோயாளியாக உள்நுழையவும்.</string>
+    <string name="enter_username">உங்கள் பயனர் பெயரை உள்ளிடவும்.</string>
+    <string name="password_hint">****************</string>
+    <string name="login_button">உள்நுழைய</string>
+
+    <!-- Register Page -->
+    <string name="register_to">பதிவு செய்யுங்கள்</string>
+    <string name="register_as_patient">உங்கள் மின்னஞ்சலைப் பயன்படுத்தி நோயாளியாக பதிவு செய்யுங்கள்.</string>
+    <string name="hint_username">உங்கள் பயனர் பெயரை உள்ளிடவும்.</string>
+    <string name="hint_email">உங்கள் மின்னஞ்சல் ஐடி உள்ளிடவும்.</string>
+    <string name="hint_password">உங்கள் கடவுச்சொல்லை உள்ளிடவும்.</string>
+    <string name="hint_confirm_password">உங்கள் கடவுச்சொல்லை உறுதிப்படுத்தவும்.</string>
+    <string name="register">பதிவு</string>
+
+    <!-- Ultrasound -->
+    <string name="title_ultrasound">அல்ட்ராசவுண்ட்</string>
+    <string name="upload_scan">முந்தைய ஸ்கேன் பதிவேற்றம்</string>
+    <string name="upload_video">வீடியோ ஸ்கேன் பதிவேற்றம்</string>
+    <string name="start_scan">ஸ்கேன் தொடங்கவும்</string>
+
+    <!-- Upload Scan -->
+    <string name="download_pdf">PDF ஆக பதிவிறக்கவும்</string>
+
+    <!-- Trimester Activity -->
+    <string name="trimester_1">முதலாவது காலாண்டு</string>
+    <string name="trimester_2">இரண்டாவது காலாண்டு</string>
+    <string name="trimester_3">மூன்றாவது காலாண்டு</string>
+    <string name="post_delivery">பிறப்புக்குப் பிறகு உணவு</string>
+    <string name="fruits">பழங்கள்</string>
+    <string name="vegetables">காய்கறிகள்</string>
+    <string name="proteins">தாவர புரதங்கள்</string>
+    <string name="animal_proteins">மிருக புரதங்கள் மற்றும் பால்</string>
+    <string name="beverages">பானங்கள்</string>
+    <string name="grains">தானியங்கள் மற்றும் முழுமையான உணவுகள்</string>
+    <string name="nuts">நட்ஸ் மற்றும் விதைகள்</string>
+    <string name="healthy_fats">ஆரோக்கியமான கொழுப்பு மற்றும் எண்ணெய்கள்</string>
+
+    <string name="hello_first_fragment">வணக்கம் முதல் பகுதி</string>
+    <string name="hello_second_fragment">வணக்கம் இரண்டாம் பகுதி. விருப்பம்: %1$s</string>
+</resources>

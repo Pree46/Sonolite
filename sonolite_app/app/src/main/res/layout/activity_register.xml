@@ -13,10 +13,7 @@
     <!-- Overlay for better contrast -->
     <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </View>
-
+        android:layout_height="match_parent"/>
 
     <!-- Registration UI -->
     <LinearLayout
@@ -30,7 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register to"
+            android:text="@string/register_to"
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:gravity="center"
@@ -40,7 +37,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SONOLITE"
+            android:text="@string/app"
             android:textSize="32sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"
@@ -51,7 +48,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register as a patient using your email."
+            android:text="@string/register_as_patient"
             android:textSize="14sp"
             android:textColor="@android:color/white"
             android:gravity="center"
@@ -63,7 +60,7 @@
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your user name."
+            android:hint="@string/hint_username"
             android:padding="12dp"
             android:background="@android:color/white"
             android:textColor="@android:color/black"
@@ -75,7 +72,7 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your email id."
+            android:hint="@string/hint_email"
             android:padding="12dp"
             android:background="@android:color/white"
             android:textColor="@android:color/black"
@@ -87,7 +84,7 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your password."
+            android:hint="@string/hint_password"
             android:padding="12dp"
             android:background="@android:color/white"
             android:textColor="@android:color/black"
@@ -100,7 +97,7 @@
             android:id="@+id/confirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm your password."
+            android:hint="@string/hint_confirm_password"
             android:padding="12dp"
             android:background="@android:color/white"
             android:textColor="@android:color/black"
@@ -114,7 +111,7 @@
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="@string/register"
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:backgroundTint="#F48FB1"

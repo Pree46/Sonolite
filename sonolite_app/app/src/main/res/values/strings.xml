@@ -4,6 +4,55 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="select_language">Select Language</string>
+
+    <!-- Main Activity -->
+    <string name="welcome_to">Welcome To</string>
+    <string name="tagline">Affordable Ultrasound Anytime, Anywhere</string>
+    <string name="login">Login</string>
+
+    <!-- Login Page -->
+    <string name="app">SONOLITE</string>
+    <string name="login_to">Login to</string>
+    <string name="login_description">Login as a patient using your registered email.</string>
+    <string name="enter_username">Enter your user name.</string>
+    <string name="password_hint">****************</string>
+    <string name="login_button">Login</string>
+
+    <!-- Register Page -->
+    <string name="register_to">Register to</string>
+    <string name="register_as_patient">Register as a patient using your email.</string>
+    <string name="hint_username">Enter your user name.</string>
+    <string name="hint_email">Enter your email id.</string>
+    <string name="hint_password">Enter your password.</string>
+    <string name="hint_confirm_password">Confirm your password.</string>
+    <string name="register">Register</string>
+
+    <!-- Ultrasound -->
+    <string name="title_ultrasound">Ultrasound</string>
+    <string name="upload_scan">Upload Previous Scan</string>
+    <string name="upload_video">Upload Video Scan</string>
+    <string name="start_scan">Start Scan</string>
+
+    <!-- Upload Scan -->
+    <string name="download_pdf">Download as PDF</string>
+
+    <!-- Trimester Activity -->
+    <string name="trimester_1">Trimester 1</string>
+    <string name="trimester_2">Trimester 2</string>
+    <string name="trimester_3">Trimester 3</string>
+    <string name="post_delivery">Post Delivery Diet</string>
+    <string name="fruits">Fruits</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="proteins">Plant Proteins</string>
+    <string name="animal_proteins">Animal Proteins and Dairy</string>
+    <string name="beverages">Beverages</string>
+    <string name="grains">Grains and Whole Foods</string>
+    <string name="nuts">Nuts and Seeds</string>
+    <string name="healthy_fats">Healthy Fats and Oils</string>
+
+
+
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 

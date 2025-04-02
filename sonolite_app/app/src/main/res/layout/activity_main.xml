@@ -14,6 +14,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
     <!-- UI Content -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +34,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome To"
+            android:text="@string/welcome_to"
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:gravity="center"
@@ -44,7 +45,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SONOLITE"
+            android:text="@string/app"
             android:textSize="32sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"
@@ -56,7 +57,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Affordable Ultrasound Anytime, Anywhere"
+            android:text="@string/tagline"
             android:textSize="14sp"
             android:textColor="@android:color/white"
             android:gravity="center"
@@ -68,7 +69,7 @@
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             android:textSize="18sp"
             android:backgroundTint="#F48FB1"
             android:textColor="@android:color/white"
@@ -81,7 +82,7 @@
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="@string/register"
             android:textSize="18sp"
             android:backgroundTint="@android:color/white"
             android:textColor="#F48FB1"
@@ -89,6 +90,4 @@
             android:fontFamily="@font/semibold_font"/>
 
     </LinearLayout>
-    
-
 </FrameLayout>

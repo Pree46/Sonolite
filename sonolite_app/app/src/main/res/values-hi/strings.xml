@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">सोनोलाइट_ऐप</string>
+    <string name="action_settings">सेटिंग्स</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">पहला खंड</string>
+    <string name="second_fragment_label">दूसरा खंड</string>
+    <string name="next">आगे</string>
+    <string name="previous">पीछे</string>
+    <string name="select_language">भाषा चुने</string>
+
+    <!-- Main Activity -->
+    <string name="welcome_to">आपका स्वागत है</string>
+    <string name="tagline">कहीं भी, कभी भी किफायती अल्ट्रासाउंड</string>
+    <string name="login">लॉगिन करें</string>
+
+    <!-- Login Page -->
+    <string name="app">सोनोलाइट</string>
+    <string name="login_to">लॉगिन करें</string>
+    <string name="login_description">अपने पंजीकृत ईमेल का उपयोग करके मरीज के रूप में लॉगिन करें।</string>
+    <string name="enter_username">अपना उपयोगकर्ता नाम दर्ज करें।</string>
+    <string name="password_hint">****************</string>
+    <string name="login_button">लॉगिन</string>
+
+    <!-- Register Page -->
+    <string name="register_to">पंजीकरण करें</string>
+    <string name="register_as_patient">अपनी ईमेल का उपयोग करके रोगी के रूप में पंजीकरण करें।</string>
+    <string name="hint_username">अपना उपयोगकर्ता नाम दर्ज करें।</string>
+    <string name="hint_email">अपना ईमेल आईडी दर्ज करें।</string>
+    <string name="hint_password">अपना पासवर्ड दर्ज करें।</string>
+    <string name="hint_confirm_password">अपना पासवर्ड पुष्टि करें।</string>
+    <string name="register">पंजीकरण करें</string>
+
+    <!-- Ultrasound -->
+    <string name="title_ultrasound">अल्ट्रासाउंड</string>
+    <string name="upload_scan">पिछला स्कैन अपलोड करें</string>
+    <string name="upload_video">वीडियो स्कैन अपलोड करें</string>
+    <string name="start_scan">स्कैन प्रारंभ करें</string>
+
+    <!-- Upload Scan -->
+    <string name="download_pdf">PDF के रूप में डाउनलोड करें</string>
+
+    <!-- Trimester Activity -->
+    <string name="trimester_1">पहली तिमाही</string>
+    <string name="trimester_2">दूसरी तिमाही</string>
+    <string name="trimester_3">तीसरी तिमाही</string>
+    <string name="post_delivery">प्रसवोत्तर आहार</string>
+    <string name="fruits">फल</string>
+    <string name="vegetables">सब्जियां</string>
+    <string name="proteins">पौध प्रोटीन</string>
+    <string name="animal_proteins">पशु प्रोटीन और डेयरी</string>
+    <string name="beverages">पेय</string>
+    <string name="grains">अनाज और संपूर्ण खाद्य पदार्थ</string>
+    <string name="nuts">सूखे मेवे और बीज</string>
+    <string name="healthy_fats">स्वस्थ वसा और तेल</string>
+
+    <string name="hello_first_fragment">नमस्ते, पहला खंड</string>
+    <string name="hello_second_fragment">नमस्ते, दूसरा खंड। तर्क: %1$s</string>
+</resources>
