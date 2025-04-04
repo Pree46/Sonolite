@@ -2,6 +2,8 @@ package com.example.sonolite_app;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -18,6 +20,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Locale;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -43,6 +46,7 @@ public class UploadVideoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        loadLanguage();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uploadvideo);
 
@@ -130,5 +134,15 @@ public class UploadVideoActivity extends AppCompatActivity {
         @Multipart
         @POST("predict/video/")
         Call<ResponseBody> uploadVideo(@Part MultipartBody.Part file);
+    }
+
+    private void loadLanguage() {
+        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
+        String languageCode = prefs.getString("Selected_Lang", "en"); // Default to English
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 }

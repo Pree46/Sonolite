@@ -37,6 +37,10 @@
     <!-- Upload Scan -->
     <string name="download_pdf">Download as PDF</string>
 
+    <!-- Diet Activity -->
+    <string name="trimester_specific_diet">Trimester Specific Diet</string>
+
+
     <!-- Trimester Activity -->
     <string name="trimester_1">Trimester 1</string>
     <string name="trimester_2">Trimester 2</string>
@@ -50,6 +54,24 @@
     <string name="grains">Grains and Whole Foods</string>
     <string name="nuts">Nuts and Seeds</string>
     <string name="healthy_fats">Healthy Fats and Oils</string>
+
+    <!--Bottom Sheet -->
+    <string name="best_choices">✅ Best Choices:</string>
+    <string name="limit_avoid">❌ Limit / Avoid:</string>
+
+    <string name="trim1_fruits_best">🍊 Citrus fruits – Boosts immunity and absorbs iron\n🍌 Bananas – Reduces nausea</string>
+    <string name="trim1_fruits_avoid">⚠️ Unwashed fruits\n⚠️ Excess pineapple and papaya</string>
+
+    <string name="trim2_fruits_best">🍍 Pineapple (Moderation) – Aids digestion\n🥑 Avocado – Healthy fats for brain</string>
+    <string name="trim2_fruits_avoid">⚠️ Unripe papaya\n⚠️ Excess grapes (high sugar)</string>
+
+    <string name="trim3_fruits_best">🥝 Kiwi – High vitamin C\n🍠 Sweet potatoes – Supports fetal growth</string>
+    <string name="trim3_fruits_avoid">⚠️ Excess salty foods</string>
+
+    <string name="post_fruits_best">🥭 Papaya – Supports milk production\n🍌 Bananas – Boosts energy</string>
+    <string name="post_fruits_avoid">⚠️ Citrus fruits in excess</string>
+
+
 
 
 

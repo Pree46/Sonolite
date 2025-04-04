@@ -12,7 +12,7 @@ public class SplashActivity extends AppCompatActivity {
 
         // Move to the main activity after 2 seconds
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashActivity.this, LanguageSelectionActivity.class);
             startActivity(intent);
             finish(); // Finish SplashActivity so user can't go back to it
         }, 2000);

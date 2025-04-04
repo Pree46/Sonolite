@@ -3,19 +3,19 @@ package com.example.sonolite_app;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Locale;
 
 public class LanguageSelectionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // ✅ Load saved language before setting the view
+        loadLanguage();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language_selection);
 
@@ -29,21 +29,31 @@ public class LanguageSelectionActivity extends AppCompatActivity {
     }
 
     private void setLanguage(String languageCode) {
-        // Save selected language in SharedPreferences
+        // ✅ Save selected language in SharedPreferences
         SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
         editor.putString("Selected_Lang", languageCode);
-        editor.apply();  // Save changes
+        editor.apply();
 
-        // Set app language immediately
+        // ✅ Apply language change
+        applyLanguage(languageCode);
+
+        // ✅ Restart the activity to apply changes
+        Intent intent = new Intent(LanguageSelectionActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
+    private void loadLanguage() {
+        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
+        String languageCode = prefs.getString("Selected_Lang", "en"); // Default to English
+        applyLanguage(languageCode);
+    }
+
+    private void applyLanguage(String languageCode) {
         Locale locale = new Locale(languageCode);
         Locale.setDefault(locale);
-        android.content.res.Configuration config = new android.content.res.Configuration();
+        Configuration config = new Configuration();
         config.setLocale(locale);
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-
-        // Redirect to MainActivity
-        Intent intent = new Intent(LanguageSelectionActivity.this, MainActivity.class);
-        startActivity(intent);
-        finish();  // Finish LanguageSelectionActivity so it doesn't come back
     }
 }

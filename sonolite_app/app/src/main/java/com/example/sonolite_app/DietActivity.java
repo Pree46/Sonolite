@@ -1,6 +1,8 @@
 package com.example.sonolite_app;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -9,10 +11,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
+
 public class DietActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        loadLanguage();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet);
 
@@ -50,5 +55,15 @@ public class DietActivity extends AppCompatActivity {
         Intent intent = new Intent(DietActivity.this, TrimesterActivity.class);
         intent.putExtra("TRIMESTER", trimester);
         startActivity(intent);
+    }
+
+    private void loadLanguage() {
+        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
+        String languageCode = prefs.getString("Selected_Lang", "en"); // Default to English
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 }
