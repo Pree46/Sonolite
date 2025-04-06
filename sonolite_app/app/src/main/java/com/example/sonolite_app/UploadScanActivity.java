@@ -51,10 +51,8 @@ import retrofit2.http.Part;
 public class UploadScanActivity extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
 
-    // ✅ FIX: Use correct API URL for emulator/real device
-    public static final String API_URL = "http://10.0.2.2:8000/"; // Emulator
-    //public static final String API_URL = "http://192.168.10.1:8000/";
-    // Physical Device
+
+    public static final String API_URL = "http://10.0.2.2:8000/";
 
     private ImageView imageView;
     private Button uploadButton, downloadPdfButton;
@@ -74,10 +72,10 @@ public class UploadScanActivity extends AppCompatActivity {
 
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
 
-        // ✅ FIX: Use OkHttpClient to allow HTTP traffic
+
         OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
 
-        // ✅ Retrofit setup
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -152,7 +150,7 @@ public class UploadScanActivity extends AppCompatActivity {
                 public void onResponse(Call<ResponseBody> call, retrofit2.Response<ResponseBody> response) {
                     if (response.isSuccessful() && response.body() != null) {
                         try {
-                            // ✅ FIX: Convert ResponseBody to Bitmap manually
+
                             byte[] imageBytes = response.body().bytes();
                             annotatedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
 

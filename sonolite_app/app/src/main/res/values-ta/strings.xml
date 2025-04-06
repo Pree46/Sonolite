@@ -17,8 +17,8 @@
     <!-- Login Page -->
     <string name="app">சோனோலைட்</string>
     <string name="login_to">உள்நுழைய</string>
-    <string name="login_description">உங்கள் பதிவுசெய்யப்பட்ட மின்னஞ்சலைப் பயன்படுத்தி நோயாளியாக உள்நுழையவும்.</string>
-    <string name="enter_username">உங்கள் பயனர் பெயரை உள்ளிடவும்.</string>
+    <string name="login_description">பதிவுசெய்யப்பட்ட ஆதார் எண்ணை பயன்படுத்தி நோயாளராக உள்நுழைக.</string>
+    <string name="enter_aadhaar">ஆதார் எண்ணை உள்ளிடவும்</string>
     <string name="password_hint">****************</string>
     <string name="login_button">உள்நுழைய</string>
 
@@ -26,7 +26,7 @@
     <string name="register_to">பதிவு செய்யுங்கள்</string>
     <string name="register_as_patient">உங்கள் மின்னஞ்சலைப் பயன்படுத்தி நோயாளியாக பதிவு செய்யுங்கள்.</string>
     <string name="hint_username">உங்கள் பயனர் பெயரை உள்ளிடவும்.</string>
-    <string name="hint_email">உங்கள் மின்னஞ்சல் ஐடி உள்ளிடவும்.</string>
+    <string name="hint_adhaar">உங்கள் ஆதார் எண்ணை உள்ளிடவும்.</string>
     <string name="hint_password">உங்கள் கடவுச்சொல்லை உள்ளிடவும்.</string>
     <string name="hint_confirm_password">உங்கள் கடவுச்சொல்லை உறுதிப்படுத்தவும்.</string>
     <string name="register">பதிவு</string>

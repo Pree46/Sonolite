@@ -14,8 +14,8 @@
     <!-- Login Page -->
     <string name="app">SONOLITE</string>
     <string name="login_to">Login to</string>
-    <string name="login_description">Login as a patient using your registered email.</string>
-    <string name="enter_username">Enter your user name.</string>
+    <string name="login_description">Login as a patient using your registered Aadhaar Number.</string>
+    <string name="enter_aadhaar">Enter Aadhaar Number</string>
     <string name="password_hint">****************</string>
     <string name="login_button">Login</string>
 
@@ -23,7 +23,7 @@
     <string name="register_to">Register to</string>
     <string name="register_as_patient">Register as a patient using your email.</string>
     <string name="hint_username">Enter your user name.</string>
-    <string name="hint_email">Enter your email id.</string>
+    <string name="hint_adhaar">Enter your Adhaar Number.</string>
     <string name="hint_password">Enter your password.</string>
     <string name="hint_confirm_password">Confirm your password.</string>
     <string name="register">Register</string>

@@ -49,7 +49,6 @@ public class UltrasoundActivity extends AppCompatActivity {
         liveScanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Implement live scan functionality
             }
         });
 

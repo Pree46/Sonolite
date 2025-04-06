@@ -14,7 +14,7 @@ import java.util.Locale;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText username, password;
+    EditText aadhaarEditText, passwordEditText;
     Button loginButton;
     DatabaseHelper db;
 
@@ -25,30 +25,31 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         db = new DatabaseHelper(this);
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
+        aadhaarEditText = findViewById(R.id.username);
+        passwordEditText = findViewById(R.id.password);
         loginButton = findViewById(R.id.login_btn);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = username.getText().toString();
-                String pass = password.getText().toString();
+                String aadhaar = aadhaarEditText.getText().toString().trim();
+                String password = passwordEditText.getText().toString().trim();
 
-                if (user.isEmpty() || pass.isEmpty()) {
+                if (aadhaar.isEmpty() || password.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
                 } else {
-                    boolean validUser = db.checkUser(user, pass);
+                    boolean validUser = db.checkUser(aadhaar, password);
                     if (validUser) {
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this, UltrasoundActivity.class));
                     } else {
-                        Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Invalid Aadhaar or Password", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
     }
+
     private void loadLanguage() {
         SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
         String languageCode = prefs.getString("Selected_Lang", "en"); // Default to English

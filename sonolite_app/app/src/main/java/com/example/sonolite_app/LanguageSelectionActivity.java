@@ -13,7 +13,7 @@ public class LanguageSelectionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // ✅ Load saved language before setting the view
+
         loadLanguage();
 
         super.onCreate(savedInstanceState);
@@ -29,15 +29,13 @@ public class LanguageSelectionActivity extends AppCompatActivity {
     }
 
     private void setLanguage(String languageCode) {
-        // ✅ Save selected language in SharedPreferences
+
         SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
         editor.putString("Selected_Lang", languageCode);
         editor.apply();
 
-        // ✅ Apply language change
         applyLanguage(languageCode);
 
-        // ✅ Restart the activity to apply changes
         Intent intent = new Intent(LanguageSelectionActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

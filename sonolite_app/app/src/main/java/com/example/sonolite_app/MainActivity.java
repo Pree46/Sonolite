@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadLanguage() {
         SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        String languageCode = prefs.getString("Selected_Lang", "en"); // Default to English
+        String languageCode = prefs.getString("Selected_Lang", "en");
         Locale locale = new Locale(languageCode);
         Locale.setDefault(locale);
         Configuration config = new Configuration();

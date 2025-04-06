@@ -18,7 +18,7 @@ import java.util.Locale;
 
 public class TrimesterActivity extends AppCompatActivity {
 
-    private int trimester; // Store the trimester number
+    private int trimester;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,8 @@ public class TrimesterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trimester1);
 
-        // Get trimester from intent
-        trimester = getIntent().getIntExtra("TRIMESTER", 1); // Default is 1st trimester
+
+        trimester = getIntent().getIntExtra("TRIMESTER", 1);
 
     }
 
@@ -59,7 +59,7 @@ public class TrimesterActivity extends AppCompatActivity {
         }
 
 
-        // Dynamically set title & image based on selected category
+
         if (id == R.id.fruits_card) {
             title = getString(R.string.fruits);
             imageResId = R.drawable.fruits;
@@ -132,7 +132,7 @@ public class TrimesterActivity extends AppCompatActivity {
         LinearLayout contentContainer = view.findViewById(R.id.content_container);
         Button closeButton = view.findViewById(R.id.close_button);
 
-        // Set the dynamic title and image
+
         titleView.setText(title);
         imageView.setImageResource(imageResId);
 

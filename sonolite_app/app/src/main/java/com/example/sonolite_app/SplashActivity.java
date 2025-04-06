@@ -10,11 +10,11 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Move to the main activity after 2 seconds
+
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(SplashActivity.this, LanguageSelectionActivity.class);
             startActivity(intent);
-            finish(); // Finish SplashActivity so user can't go back to it
+            finish();
         }, 2000);
     }
 }

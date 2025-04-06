@@ -24,19 +24,18 @@ public class DietOptionsActivity extends AppCompatActivity {
 
         // Handle General Diet Plan button click
         generalDietButton.setOnClickListener(v -> {
-            // TODO: Open General Diet Plan screen
             Intent intent = new Intent(DietOptionsActivity.this, DietActivity.class);
             startActivity(intent);
         });
 
-        // Handle Personalized Diet Plan button click
+
         personalizedDietButton.setOnClickListener(v -> {
-            // Open the form for personalized diet plan
+
             Intent intent = new Intent(DietOptionsActivity.this, DietFormActivity.class);
             startActivity(intent);
         });
 
-        // Set up bottom navigation
+
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
         bottomNav.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
