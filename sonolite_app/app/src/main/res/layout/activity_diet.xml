@@ -160,8 +160,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@android:color/white"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/Light_pink"
+        app:itemTextColor="@color/Light_pink"
         app:menu="@menu/menu_main"
         android:elevation="8dp" />
 

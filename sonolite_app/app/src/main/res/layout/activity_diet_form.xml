@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/diet_plan_generator"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/Light_pink"
+            android:elevation="6dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Trimester -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_trimester"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+                <Spinner
+                    android:id="@+id/spinner_trimester"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Allergies -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_allergies"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+                <CheckBox android:id="@+id/checkbox_milk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_milk"
+                    android:buttonTint="@color/dark_pink"/>
+                <CheckBox android:id="@+id/checkbox_yogurt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_yogurt"
+                    android:buttonTint="@color/dark_pink"/>
+                <CheckBox android:id="@+id/checkbox_nuts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_nuts"
+                    android:buttonTint="@color/dark_pink"/>
+                <CheckBox android:id="@+id/checkbox_gluten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_gluten"
+                    android:buttonTint="@color/dark_pink"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <!-- Blood Pressure -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blood_pressure"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+                <RadioGroup
+                    android:id="@+id/radio_bp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/radio_high"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bp_high"
+                        android:buttonTint="@color/dark_pink"/>
+                    <RadioButton android:id="@+id/radio_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bp_normal"
+                        android:buttonTint="@color/dark_pink"/>
+                    <RadioButton android:id="@+id/radio_low"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bp_low"
+                        android:buttonTint="@color/dark_pink"/>
+                </RadioGroup>
+
+                <!-- Blood Sugar -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blood_sugar"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+                <RadioGroup
+                    android:id="@+id/radio_sugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/radio_gdm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sugar_gdm"
+                        android:buttonTint="@color/dark_pink"/>
+                    <RadioButton android:id="@+id/radio_normal_sugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sugar_normal"
+                        android:buttonTint="@color/dark_pink"/>
+                </RadioGroup>
+
+                <!-- Diet Type -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diet_type"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+                <RadioGroup
+                    android:id="@+id/radio_diet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/radio_veg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/veg"
+                        android:buttonTint="@color/dark_pink"/>
+                    <RadioButton android:id="@+id/radio_nonveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nonveg"
+                        android:buttonTint="@color/dark_pink"/>
+                </RadioGroup>
+
+                <!-- User Name -->
+                <EditText
+                    android:id="@+id/edit_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_your_name"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- Doctor Name -->
+                <EditText
+                    android:id="@+id/edit_doctor_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_doctor_name"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/generate_diet_plan"
+            android:backgroundTint="@color/Light_pink"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"/>
+    </LinearLayout>
+</ScrollView>

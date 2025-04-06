@@ -73,6 +73,33 @@
     <string name="post_fruits_best">🥭 பப்பாளி – பால்விருத்தியை அதிகரிக்கிறது\n🍌 வாழைப்பழம் – சக்தியை அதிகரிக்கிறது</string>
     <string name="post_fruits_avoid">⚠️ மிகுந்த புளிப்பு பழங்கள்</string>
 
+    <!-- Diet Options -->
+    <string name="title_diet_options">உணவு விருப்பங்கள்</string>
+    <string name="general_diet_plan">பொது உணவுத்திட்டம்</string>
+    <string name="personalized_diet_plan">தனிப்பயன் உணவுத்திட்டம்</string>
+
+    <!-- Diet Form -->
+    <string name="diet_plan_generator">உணவுத் திட்ட உருவாக்கி</string>
+    <string name="select_trimester">மூன்றாண்டுகள் தேர்வு செய்யவும்</string>
+    <string name="select_allergies">அலர்ஜிகளைத் தேர்வு செய்யவும்</string>
+    <string name="allergy_milk">பால்</string>
+    <string name="allergy_yogurt">தயிர்</string>
+    <string name="allergy_nuts">முந்திரிகள்</string>
+    <string name="allergy_gluten">குளூட்டன்</string>
+    <string name="blood_pressure">இரத்த அழுத்தம்</string>
+    <string name="bp_high">அதிகம்</string>
+    <string name="bp_normal">சாதாரணம்</string>
+    <string name="bp_low">குறைவாக</string>
+    <string name="blood_sugar">இரத்த சர்க்கரை</string>
+    <string name="sugar_gdm">கர்ப்ப கால நீரிழிவு</string>
+    <string name="sugar_normal">சாதாரணம்</string>
+    <string name="diet_type">உணவுப் பாணி</string>
+    <string name="veg">சைவம்</string>
+    <string name="nonveg">அசைவம்</string>
+    <string name="enter_your_name">உங்கள் பெயரை உள்ளிடவும்</string>
+    <string name="enter_doctor_name">டாக்டர் பெயர்</string>
+    <string name="generate_diet_plan">உணவுத் திட்டம் உருவாக்கு</string>
+
 
     <string name="hello_first_fragment">வணக்கம் முதல் பகுதி</string>
     <string name="hello_second_fragment">வணக்கம் இரண்டாம் பகுதி. விருப்பம்: %1$s</string>

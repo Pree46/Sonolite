@@ -10,6 +10,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import android.os.Environment;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.VideoView;
 import android.widget.MediaController;
@@ -19,6 +20,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
+
+import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -56,6 +60,7 @@ public class UploadVideoActivity extends AppCompatActivity {
         videoView = findViewById(R.id.videoView);
         uploadButton = findViewById(R.id.uploadButton);
         downloadButton = findViewById(R.id.downloadVideoButton);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(100, TimeUnit.SECONDS)
@@ -73,6 +78,22 @@ public class UploadVideoActivity extends AppCompatActivity {
 
         uploadButton.setOnClickListener(v -> pickVideo());
         downloadButton.setOnClickListener(v -> downloadVideo());
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        startActivity(new Intent(UploadVideoActivity.this, UltrasoundActivity.class));
+                        return true;
+                    case R.id.nav_scan:
+                        return true; // Already in the scan activity
+                    case R.id.nav_diet:
+                        startActivity(new Intent(UploadVideoActivity.this, DietOptionsActivity.class));
+                }
+                return false;
+            }
+        });
     }
 
     private void pickVideo() {

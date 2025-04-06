@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
                     boolean validUser = db.checkUser(user, pass);
                     if (validUser) {
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginActivity.this, WelcomeActivity.class));
+                        startActivity(new Intent(LoginActivity.this, UltrasoundActivity.class));
                     } else {
                         Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
                     }

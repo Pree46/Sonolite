@@ -20,6 +20,17 @@
         android:theme="@style/Theme.Sonolite_app.NoActionBar"
         tools:targetApi="31">
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.Splash"
@@ -45,9 +56,11 @@
         <activity android:name=".RegisterActivity" android:exported="true" />
         <activity android:name=".LoginActivity" android:exported="true" />
         <activity android:name=".LanguageSelectionActivity"/>
-        <activity android:name=".WelcomeActivity"/>
         <activity android:name=".UltrasoundActivity" android:exported="true" />
         <activity android:name=".UploadScanActivity" android:exported="true" />
+        <activity android:name=".UploadVideoActivity" android:exported="true" />
+        <activity android:name=".DietOptionsActivity" android:exported="true" />
+        <activity android:name=".DietFormActivity"/>
         <activity android:name=".DietActivity" android:exported="true"/>
         <activity android:name=".TrimesterActivity"/>
 

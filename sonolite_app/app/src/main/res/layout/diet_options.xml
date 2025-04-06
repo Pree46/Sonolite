@@ -31,7 +31,7 @@
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_ultrasound"
+            android:text="@string/title_diet_options"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"
@@ -41,10 +41,10 @@
 
         <!-- Upload Previous Scan Button -->
         <Button
-            android:id="@+id/uploadScanButton"
+            android:id="@+id/general_diet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/upload_scan"
+            android:text="@string/general_diet_plan"
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:backgroundTint="#F48FB1"
@@ -55,10 +55,10 @@
 
         <!-- Upload Existing video-->
         <Button
-            android:id="@+id/uploadVideoButton"
+            android:id="@+id/personalized_diet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/upload_video"
+            android:text="@string/personalized_diet_plan"
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:backgroundTint="#F48FB1"
@@ -67,19 +67,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/semibold_font"/>
 
-        <!-- Start Scan Button -->
-        <Button
-            android:id="@+id/liveScanButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/start_scan"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:backgroundTint="#F48FB1"
-            android:padding="12dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/semibold_font"/>
+
     </LinearLayout>
 
     <!-- Bottom Navigation Bar -->

@@ -18,6 +18,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -98,10 +100,12 @@ public class UploadScanActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        startActivity(new Intent(UploadScanActivity.this, MainActivity.class));
+                        startActivity(new Intent(UploadScanActivity.this, UltrasoundActivity.class));
                         return true;
                     case R.id.nav_scan:
                         return true; // Already in the scan activity
+                    case R.id.nav_diet:
+                        startActivity(new Intent(UploadScanActivity.this, DietOptionsActivity.class));
                 }
                 return false;
             }
@@ -197,6 +201,8 @@ public class UploadScanActivity extends AppCompatActivity {
             Toast.makeText(this, "Failed to save PDF", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
     interface ApiService {
         @Multipart

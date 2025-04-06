@@ -71,6 +71,39 @@
     <string name="post_fruits_best">🥭 Papaya – Supports milk production\n🍌 Bananas – Boosts energy</string>
     <string name="post_fruits_avoid">⚠️ Citrus fruits in excess</string>
 
+    <!-- Diet Options -->
+    <string name="title_diet_options">Diet Options</string>
+    <string name="general_diet_plan">General Diet Plan</string>
+    <string name="personalized_diet_plan">Personalized Diet Plan</string>
+
+    <!-- Diet Form -->
+    <string name="diet_plan_generator">Diet Plan Generator</string>
+    <string name="select_trimester">Select Trimester</string>
+    <string name="select_allergies">Select Allergies</string>
+    <string name="allergy_milk">Milk</string>
+    <string name="allergy_yogurt">Yogurt</string>
+    <string name="allergy_nuts">Nuts</string>
+    <string name="allergy_gluten">Gluten</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="bp_high">High</string>
+    <string name="bp_normal">Normal</string>
+    <string name="bp_low">Low</string>
+    <string name="blood_sugar">Blood Sugar</string>
+    <string name="sugar_gdm">Gestational Diabetes</string>
+    <string name="sugar_normal">Normal</string>
+    <string name="diet_type">Diet Type</string>
+    <string name="veg">Vegetarian</string>
+    <string name="nonveg">Non-Vegetarian</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_doctor_name">Doctors name</string>
+    <string name="generate_diet_plan">GENERATE DIET PLAN</string>
+    <string-array name="trimester_array">
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+    </string-array>
+
+
 
 
 
