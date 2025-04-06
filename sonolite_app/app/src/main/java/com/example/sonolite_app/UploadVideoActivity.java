@@ -2,10 +2,12 @@ package com.example.sonolite_app;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+
+import okhttp3.Callback;
+import okhttp3.Request;
+import okhttp3.Response;
 import android.os.Environment;
 import android.util.Log;
 import android.widget.Button;
@@ -13,14 +15,16 @@ import android.widget.VideoView;
 import android.widget.MediaController;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -46,25 +50,29 @@ public class UploadVideoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        loadLanguage();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uploadvideo);
 
         videoView = findViewById(R.id.videoView);
         uploadButton = findViewById(R.id.uploadButton);
-        downloadButton = findViewById(R.id.downloadPdfButton);
+        downloadButton = findViewById(R.id.downloadVideoButton);
 
-        // Set up Retrofit
-        OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(100, TimeUnit.SECONDS)
+                .readTimeout(100, TimeUnit.SECONDS)
+                .writeTimeout(100, TimeUnit.SECONDS)
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
+
         apiService = retrofit.create(ApiService.class);
 
         uploadButton.setOnClickListener(v -> pickVideo());
-        downloadButton.setOnClickListener(v -> downloadProcessedVideo());
+        downloadButton.setOnClickListener(v -> downloadVideo());
     }
 
     private void pickVideo() {
@@ -125,24 +133,62 @@ public class UploadVideoActivity extends AppCompatActivity {
         }
     }
 
-    private void downloadProcessedVideo() {
-        // TODO: Implement logic to fetch and play processed video
-        Toast.makeText(this, "Download feature coming soon!", Toast.LENGTH_SHORT).show();
+    private void downloadVideo() {
+        String processedVideoUrl = API_URL + "outputs/processed_upload_video.mp4";
+
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder().url(processedVideoUrl).build();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(@NonNull okhttp3.Call call, @NonNull Response response) throws IOException {
+                if (!response.isSuccessful()) {
+                    Log.e("Download Error", "Server error: " + response.code());
+                    runOnUiThread(() -> Toast.makeText(UploadVideoActivity.this, "Server error: " + response.code(), Toast.LENGTH_SHORT).show());
+                    return;
+                }
+
+                File videoFile = new File(getExternalFilesDir(Environment.DIRECTORY_MOVIES), "processed_video.mp4");
+                FileOutputStream fos = new FileOutputStream(videoFile);
+                fos.write(response.body().bytes());
+                fos.close();
+
+                Log.d("Download", "Video saved at: " + videoFile.getAbsolutePath());
+                Log.d("Download", "File exists: " + videoFile.exists());
+                Log.d("Download", "File size: " + videoFile.length() + " bytes");
+
+                runOnUiThread(() -> {
+                    VideoView videoView = findViewById(R.id.videoView);
+                    MediaController mediaController = new MediaController(UploadVideoActivity.this);
+                    mediaController.setAnchorView(videoView);
+
+                    Uri videoUri = Uri.fromFile(videoFile);
+
+                    Log.d("VideoDebug", "Playing video from: " + videoFile.getAbsolutePath());
+                    Log.d("VideoDebug", "File exists: " + videoFile.exists());
+                    Log.d("VideoDebug", "File size: " + videoFile.length() + " bytes");
+
+                    videoView.stopPlayback();
+                    videoView.setVideoURI(null);
+
+                    videoView.setVideoURI(videoUri);
+                    videoView.setMediaController(mediaController);
+                    videoView.requestFocus();
+                    videoView.start();
+                });
+            }
+
+            @Override
+            public void onFailure(@NonNull okhttp3.Call call, @NonNull IOException e) {
+                runOnUiThread(() -> Toast.makeText(UploadVideoActivity.this, "Download Failed!", Toast.LENGTH_SHORT).show());
+            }
+        });
     }
+
+
 
     interface ApiService {
         @Multipart
-        @POST("predict/video/")
+        @POST("/process_video/")
         Call<ResponseBody> uploadVideo(@Part MultipartBody.Part file);
-    }
-
-    private void loadLanguage() {
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        String languageCode = prefs.getString("Selected_Lang", "en"); // Default to English
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 }
