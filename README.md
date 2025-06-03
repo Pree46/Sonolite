@@ -1,6 +1,8 @@
 # 🌟 Sonolite - AI-Powered Handheld Ultrasound for Rural Healthcare
 
-![Sonolite Banner](images/sonolite_banner.png) <!-- Replace with your image path -->
+<p align="center">
+  <img src="sonolite_app/app/src/main/res/drawable/logo.png" alt="Sonolite Banner" width="200"/>
+</p>
 
 ## 🧠 Abstract
 
@@ -8,7 +10,7 @@ Access to ultrasound technology remains a significant challenge in rural healthc
 
 **Sonolite** is introduced as an **AI-powered**, **low-cost handheld ultrasound solution** tailored for rural areas. It integrates a deep learning model utilizing **R-CNN with a custom ResNet34 backbone** to detect fetal structures like the abdomen, legs, hands, and head. The app also provides **trimester-specific dietary recommendations** to support maternal health. 
 
-A user survey conducted among rural public health centers helped shape Sonolite's feature development. The solution emphasizes cost reduction, AI assistance, and intuitive usability, making prenatal diagnostics more accessible and efficient in low-resource settings.
+The solution emphasizes cost reduction, AI assistance, and intuitive usability, making prenatal diagnostics more accessible and efficient in low-resource settings.
 
 ---
 
@@ -50,23 +52,10 @@ Sonolite aims to **revolutionize prenatal care** in underserved regions by offer
 | **Languages Supported** | English, Hindi, Tamil |
 | **Tools** | Android Studio, VS Code, Jupiter Notebook, Kaggle for training models |
 
----
-
-## 📷 Screenshots
-
-| Login | Detection | Diet Plan |
-|-------|-----------|-----------|
-| ![Login](images/login.png) | ![Detection](images/detection.png) | ![Diet](images/diet.png) |
-
-*Replace `images/*.png` with your actual paths*
-
----
 
 ## 🧪 Dataset
 
-- **Ultrasound Model**: Trained on fetal ultrasound image datasets.
-- **Diet Recommendation**: Based on medical diet datasets tailored by trimester and conditions.
-
+- **Ultrasound Model**: Trained on [FPUS23 dataset](https://github.com/bharathprabakaran/FPUS23).
 ---
 
 ## 📋 How to Run
@@ -77,7 +66,7 @@ Sonolite aims to **revolutionize prenatal care** in underserved regions by offer
 2. Open the project in Android Studio
     - Run the app on emulator or Android device.
     - Ensure model files are correctly stored in assets or app directory.
-3. Run Flask API locally or host it.
+3. Run Flask API locally.
 
 ## 🚀 Future Enhancements
 
@@ -90,7 +79,7 @@ Sonolite aims to **revolutionize prenatal care** in underserved regions by offer
 
 - Community Health Workers who shared insights.  
 - Public Health Survey Participants.  
-- Open-source contributors & datasets.  
+- [FPUS23 dataset](https://github.com/bharathprabakaran/FPUS23).   
 
 ---
 
